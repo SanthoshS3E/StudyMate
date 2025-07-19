@@ -1,69 +1,99 @@
-# React + TypeScript + Vite
+# 📘 StudyMate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+StudyMate is a collaborative study tool that lets you **upload PDFs, take page-based notes, invite friends to join**, and even **talk via voice chat in real-time**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ **Upload & View PDFs** – Uses Google Docs viewer for smooth display
+✅ **Page-Specific Notes** – Notes are saved per PDF page
+✅ **Invite Friends** – Share a unique session link for real-time collaboration
+✅ **Voice Chat** – Built-in WebRTC-based voice communication
+✅ **Firebase Sync** – All notes & session data stored in Firestore
+---
+## 🛠️ Tech Stack
+* **React + TypeScript + Vite**
+* **React Router DOM**
+* **Firebase (Auth, Firestore, Storage)**
+* **WebRTC for voice chat**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+ ├── App.tsx            # Main app routes
+ ├── Home.tsx           # Upload & start sessions
+ ├── PDFWithNotes.tsx   # PDF viewer + notes + invite + voice
+ ├── StudyRoom.tsx      # Guest session view
+ ├── firebaseConfig.ts  # Firebase setup
+ ├── styles.css         # Global styles
+ └── main.tsx           # React entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔧 Setup & Run Locally
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1️⃣ **Clone the repo**
+
+```sh
+git clone https://github.com/SanthoshS3E/StudyMate.git
+cd StudyMate
 ```
+
+2️⃣ **Install dependencies**
+
+```sh
+npm install
+```
+
+3️⃣ **Configure Firebase**
+
+Edit `src/firebaseConfig.ts` with your Firebase credentials:
+
+```ts
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+```
+
+4️⃣ **Run the dev server**
+
+```sh
+npm run dev
+```
+
+5️⃣ Open in browser → `http://localhost:5173`
+
+---
+
+## 🌐 Deployment
+
+Deployed on **Firebase Hosting**:
+
+```sh
+npm run build
+firebase deploy
+```
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork and improve! PRs welcome 🙌
+
+---
+
+## 📜 License
+
+MIT License © 2025 **Santhosh S**
+
+---
+
+Happy Studying! 🎉
