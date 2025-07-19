@@ -1,6 +1,7 @@
 # 📘 StudyMate
 
 StudyMate is a collaborative study tool that lets you **upload PDFs, take page-based notes, invite friends to join**, and even **talk via voice chat in real-time**.
+**🔗 Live Demo:** [https://studymate-com.web.app/](https://studymate-com.web.app/)
 
 ## 🚀 Features
 
