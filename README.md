@@ -5,9 +5,13 @@ StudyMate is a collaborative study tool that lets you **upload PDFs, take page-b
 ## 🚀 Features
 
 ✅ **Upload & View PDFs** – Uses Google Docs viewer for smooth display
+
 ✅ **Page-Specific Notes** – Notes are saved per PDF page
+
 ✅ **Invite Friends** – Share a unique session link for real-time collaboration
+
 ✅ **Voice Chat** – Built-in WebRTC-based voice communication
+
 ✅ **Firebase Sync** – All notes & session data stored in Firestore
 ---
 ## 🛠️ Tech Stack
